@@ -29,7 +29,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String words = "aaaa abc abb something";
+        String words;
+
+        if (args.length > 0) words = args[0];
+        else words = "aaaa abc abb something";
+
         String[] result = findWords(words);
         System.out.println(Arrays.toString(result));
     }
