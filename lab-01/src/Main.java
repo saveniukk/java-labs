@@ -9,21 +9,23 @@ public class Main {
         int index = 0;
 
         for (String word : arrayOfWords) {
-            boolean allUnique = true;
-
-            for (int j = 0; j < word.length(); j++) {
-                for (int k = j + 1; k < word.length(); k++) {
-                    if (word.charAt(j) == word.charAt(k)) {
-                        allUnique = false;
-                        break;
-                    }
-                }
-                if (!allUnique) break;
+            if (hasAllUniqueChars(word)) {
+                resultArray[index++] = word;
             }
-            if (allUnique) resultArray[index++] = word;
         }
         resultArray = Arrays.copyOf(resultArray, index);
         return resultArray;
+    }
+
+    private static boolean hasAllUniqueChars(String word) {
+        for (int j = 0; j < word.length(); j++) {
+            for (int k = j + 1; k < word.length(); k++) {
+                if (word.charAt(j) == word.charAt(k)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
