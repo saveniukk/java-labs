@@ -23,4 +23,17 @@
 hs_err_pid*
 replay_pid*
 
+# IntelliJ
 .idea/
+out/
+
+# Gradle files
+build/
+.gradle/
+
+# Exception: Keep the Gradle wrapper (after *.jar rule)
+!gradle/wrapper/gradle-wrapper.jar
+
+# System files
+.DS_Store
+Thumbs.db
