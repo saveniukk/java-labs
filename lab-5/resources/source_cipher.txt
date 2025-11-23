@@ -1,0 +1,5 @@
+CONFIDENTIAL DATA
+Login: admin
+Password: super_secret_password_123
+System status: OK.
+Good luck!
